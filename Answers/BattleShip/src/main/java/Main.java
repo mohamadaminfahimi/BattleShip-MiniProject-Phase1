@@ -66,20 +66,20 @@ public class Main {
       @param grid The grid to initialize.
      */
     static void initializeGrid(char[][] grid) {
-            for (int i = 1; i < GRID_SIZE + 1; i++) {
-                grid[i][0] =(char) (i + 1);
-            }
-            for (int j = 0; j < GRID_SIZE; j++) {
-                char c = 'a';
-                grid[0][j] = c++;
-
-                for (int i = 1; i < GRID_SIZE; i++) {
-                    for (j = 1; j < GRID_SIZE + 1; j++) {
-                        grid[i][j] = '~';
-                    }
-                }
+        grid[0][0] = ' ';
+        for (int i = 1; i < GRID_SIZE; i++) {
+            grid[i][0] = (char) (i - 1 + '0');
+        }
+        char c = 'a';
+        for (int j = 1; j < GRID_SIZE; j++) {
+            grid[0][j] = c++;
+        }
+        for (int i = 1; i < GRID_SIZE; i++) {
+            for (int j = 1; j < GRID_SIZE; j++) {
+                grid[i][j] = '~';
             }
         }
+    }
 
     /**
       Places ships randomly on the given grid.
