@@ -66,7 +66,19 @@ public class BattleShip {
       @param grid The grid to initialize.
      */
     static void initializeGrid(char[][] grid) {
-        //todo
+            for (int i = 1; i < GRID_SIZE + 1; i++) {
+                grid[i][0] = i + 1;
+            }
+            for (int j = 0; j < GRID_SIZE; j++) {
+                cahr char = 'a'
+                grid[0][j] = char++;
+                for (int i = 1; i < GRID_SIZE; i++) {
+                    for (int j = 1; j < GRID_SIZE + 1; j++) {
+                        grid[i][j] = '~';
+                    }
+                }
+            }
+        }
     }
 
     /**
