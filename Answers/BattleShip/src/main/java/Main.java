@@ -4,7 +4,7 @@ import java.util.Scanner;
   The BattleShip class manages the gameplay of the Battleship game between two players.
   It includes methods to manage grids, turns, and check the game status.
  */
-public class Batlleship {
+public class Main {
 
     // Grid size for the game
     static final int GRID_SIZE = 10;
@@ -80,7 +80,6 @@ public class Batlleship {
                 }
             }
         }
-    }
 
     /**
       Places ships randomly on the given grid.
